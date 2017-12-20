@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="think-common" />
+        <module name="think-core" />
+        <module name="think-front" />
+        <module name="think-front-api" />
+        <module name="think-front-dubbo" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="think" target="1.6" />
+      <module name="think-common" target="1.6" />
+      <module name="think-core" target="1.6" />
+      <module name="think-front" target="1.6" />
+      <module name="think-front-api" target="1.6" />
+      <module name="think-front-dubbo" target="1.6" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
