@@ -14,12 +14,12 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="think" target="1.6" />
-      <module name="think-common" target="1.6" />
-      <module name="think-core" target="1.6" />
-      <module name="think-front" target="1.6" />
-      <module name="think-front-api" target="1.6" />
-      <module name="think-front-dubbo" target="1.6" />
+      <module name="think" target="1.8" />
+      <module name="think-common" target="1.8" />
+      <module name="think-core" target="1.8" />
+      <module name="think-front" target="1.8" />
+      <module name="think-front-api" target="1.8" />
+      <module name="think-front-dubbo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

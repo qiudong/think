@@ -24,6 +24,16 @@
             <artifactId>json-path</artifactId>
             <scope>test</scope>
         </dependency>
+
+
+        <!--支持热启动jar包-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+            <!-- optional=true,依赖不会传递，该项目依赖devtools；之后依赖该项目的项目如果想要使用devtools，需要重新引入 -->
+        </dependency>
+
     </dependencies>
 
     <!--版本变量-->
@@ -37,7 +47,17 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <excludeDevtools>false</excludeDevtools>
+                </configuration>
+            </plugin>
         </plugins>
+
+
+
     </build>
 
     <repositories>
@@ -52,6 +72,8 @@
             <url>https://repo.spring.io/libs-release</url>
         </pluginRepository>
     </pluginRepositories>
+
+
 
 
     <groupId>think</groupId>
