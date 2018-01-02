@@ -1,11 +1,17 @@
 package com.think.front;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication() //必須
+//指定扫描的mapper接口所在的包
+@MapperScan("com")
+//启动注解事务管理
+@EnableTransactionManagement
 public class Application{
 
     protected final static Logger logger = LoggerFactory.getLogger(Application.class);

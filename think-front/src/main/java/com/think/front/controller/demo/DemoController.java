@@ -18,6 +18,8 @@ import com.think.front.domain.Person;
 @RestController
 public class DemoController extends AbstractController{
 
+
+
     @RequestMapping("/greeting1")
     public ResponseEntity greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
         System.out.print("进入controller");
@@ -54,6 +56,7 @@ public class DemoController extends AbstractController{
         List<String> list = new ArrayList<String>();
         list.add("2222");
         list.add("111");
+
 //        List<Map<String,Object>> list = new ArrayList<Map<String,Object>>();
 //        Map map  = new HashMap<String, Object>();
 //        map.put("a","11");
