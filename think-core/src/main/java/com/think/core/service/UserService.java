@@ -7,5 +7,5 @@ import com.think.core.po.UserPo;
  */
 public interface UserService {
 
-    UserPo getUser(String userid);
+    UserPo getUser(Integer userid);
 }

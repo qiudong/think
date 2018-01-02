@@ -1,6 +1,9 @@
 package com.think.front.controller.demo;
 
+import com.think.core.po.UserPo;
+import com.think.core.service.UserService;
 import com.think.front.controller.AbstractController;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,7 +21,8 @@ import com.think.front.domain.Person;
 @RestController
 public class DemoController extends AbstractController{
 
-
+    @Autowired
+    protected UserService userService;
 
     @RequestMapping("/greeting1")
     public ResponseEntity greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
@@ -33,6 +37,10 @@ public class DemoController extends AbstractController{
 //        list.forEach(item->{
 //            System.out.println(item);
 //        });
+
+        UserPo user = userService.getUser(1);
+//        System.out.println(user.getPassword());
+
 //
 
         Person person = new Person();
