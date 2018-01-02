@@ -1,6 +1,6 @@
 package com.think.front.controller.demo;
 
-import com.think.core.po.UserPo;
+import com.think.core.po.User;
 import com.think.core.service.UserService;
 import com.think.front.controller.AbstractController;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,9 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import com.think.front.domain.Person;
 /**
@@ -38,7 +36,7 @@ public class DemoController extends AbstractController{
 //            System.out.println(item);
 //        });
 
-        UserPo user = userService.getUser(1);
+        User user = userService.getUser(1);
 //        System.out.println(user.getPassword());
 
 //

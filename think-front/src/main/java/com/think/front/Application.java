@@ -15,6 +15,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 //指定扫描的mapper接口所在的包
 //启动注解事务管理
 @EnableTransactionManagement
+@MapperScan("com.think.core.mapper")
 public class Application{
 
     protected final static Logger logger = LoggerFactory.getLogger(Application.class);

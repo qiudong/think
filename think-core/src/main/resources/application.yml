@@ -1,28 +1,27 @@
 spring:
-  profiles:
-    active: prod
-      #数据源配置
-      datasource:
+    datasource:
+        name: test
         url: jdbc:mysql://localhost:3306/test_user
         username: root
         password: root
-        driver-class-name: com.mysql.jdbc.Driver
+        # 使用druid数据源
         type: com.alibaba.druid.pool.DruidDataSource
-        connectionProperties: druid.stat.mergeSql=true
-      #模板引擎
-      freemarker:
-        #关闭缓存
-        cache: false
-        request-context-attribute: request
-        #模板加载的位置
-        template-loader-path: classpath:/templates
-        #前缀
-        suffix: .htm
-        #后缀
-        prefix: /htm/
-
-    mybatis:
+        driver-class-name: com.mysql.jdbc.Driver
+        filters: stat
+        maxActive: 20
+        initialSize: 1
+        maxWait: 60000
+        minIdle: 1
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: select 'x'
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        poolPreparedStatements: true
+        maxOpenPreparedStatements: 20
+mybatis:
       #实体类所做包
       type-aliases-package: com.think.core.po
       #mapper.xml所在位置
-      mapper-locations: classpath:mappers/*.xml
+      mapper-locations: classpath:mapper/*.xml

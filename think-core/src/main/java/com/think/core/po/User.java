@@ -12,7 +12,7 @@ import org.apache.ibatis.type.Alias;
 @AllArgsConstructor
 @ToString
 @EqualsAndHashCode(callSuper = false)
-public class UserPo {
+public class User {
     private Integer userid;
     private String userName;
     private String password;
