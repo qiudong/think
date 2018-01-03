@@ -10,8 +10,7 @@ import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfigurat
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class
-},scanBasePackages = "com.think") //必須
+@SpringBootApplication(scanBasePackages = "com.think") //必須
 //指定扫描的mapper接口所在的包
 //启动注解事务管理
 @EnableTransactionManagement
